@@ -39,7 +39,7 @@ def main():
     
     
     #Various operations in a list
-    operation  = [+ ,-,*, /]
+    operation  = ["+","-","*", "/"]
     
     if user == +  
     
