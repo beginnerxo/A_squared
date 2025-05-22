@@ -25,6 +25,10 @@ def div(x,y):
 def pow(x, y):
     return x ** y
 
+#cancel function: if user wrong to type, you cancel the action
+def cancel():
+    if #user click "cancel", the last value or operation will be deleted
+
 #main method for calculations
 def main():
 
