@@ -35,34 +35,34 @@ def main():
     #Various operations in a list
     operation  = ["+","-","*","/"]
     
-    
-    
-  
     '''accept the values for the calculations. 3 values to be exact needed here
         FIRST NUMBER, OPERATION, SECOND NUMBER
         
     '''
-    firstValue = input("Enter the first value: ")
-    input_operation = input("enter the operation")
-    secondValue = input("enter the second value: ")
+
+    try:
+        firstValue = float(input("Enter the first value: "))
+        input_operation = input("enter the operation: ")
+        secondValue = float(input("enter the second value: "))
 
     
     # search for the input_operation in the list of operations 
     
-    if input_operation in operation:
-        if input_operation == "+":
-            print(add(firstValue,secondValue))
-        if input_operation == "-":
-            print(sub(firstValue, secondValue))
-        if input_operation == "*":
-            print(mul(firstValue, secondValue))
-        if input_operation == "/":
-            print(div(firstValue, secondValue))
-        if input_operation == "**":
-            print(pow(firstValue, secondValue))
-    else:
-        print("This is invalid") 
-    
+        if input_operation in operation:
+            if input_operation == "+":
+                print(add(firstValue,secondValue))
+            if input_operation == "-":
+                print(sub(firstValue, secondValue))
+            if input_operation == "*":
+                print(mul(firstValue, secondValue))
+            if input_operation == "/":
+                print(div(firstValue, secondValue))
+            if input_operation == "**":
+                print(pow(firstValue, secondValue))
+        else:
+            print("This is invalid") 
+    except ValueError:
+        print("it has to be a float number")
         #use if and else statement to print out the appropriate operations and print out the correct values 
          
     
