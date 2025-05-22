@@ -2,7 +2,10 @@
     OUTPUT: floating number
 
 '''
-# add two numbers. 
+
+# add two numbers.
+
+ 
 def add(x: float, y: float) -> float:
     addition = x + y
     return addition
@@ -25,6 +28,7 @@ def div(x,y):
 def pow(x, y):
     return x ** y
 
+
 #cancel function: if user wrong to type, you cancel the action
 #def cancel():
     #if #user click "cancel", the last value or operation will be deleted
@@ -33,37 +37,52 @@ def pow(x, y):
 def main():
 
     #Various operations in a list
-    operation  = ["+","-","*","/"]
+    operation  = ["+","-","*","/", "**"]
     
     '''accept the values for the calculations. 3 values to be exact needed here
         FIRST NUMBER, OPERATION, SECOND NUMBER
         
     '''
 
-    try:
-        firstValue = float(input("Enter the first value: "))
-        input_operation = input("enter the operation: ")
-        secondValue = float(input("enter the second value: "))
+    #determinant = False 
+    
+    while True:
+   
+        try:
+            firstValue = float(input("Enter the first value: "))
+            input_operation = input("enter the operation: ")
+            secondValue = float(input("enter the second value: "))
 
-    
-    # search for the input_operation in the list of operations 
-    
-        if input_operation in operation:
-            if input_operation == "+":
-                print(add(firstValue,secondValue))
-            if input_operation == "-":
-                print(sub(firstValue, secondValue))
-            if input_operation == "*":
-                print(mul(firstValue, secondValue))
-            if input_operation == "/":
-                print(div(firstValue, secondValue))
-            if input_operation == "**":
-                print(pow(firstValue, secondValue))
-        else:
-            print("This is invalid") 
-    except ValueError:
-        print("it has to be a float number")
-        #use if and else statement to print out the appropriate operations and print out the correct values 
+        
+        # search for the input_operation in the list of operations 
+        
+            if input_operation in operation:
+                if input_operation == "+":
+                    print(add(firstValue,secondValue))
+                if input_operation == "-":
+                    print(sub(firstValue, secondValue))
+                if input_operation == "*":
+                    print(mul(firstValue, secondValue))
+                if input_operation == "/":
+                    print(div(firstValue, secondValue))
+                if input_operation == "**":
+                    print(pow(firstValue, secondValue))
+            else:
+                print("This is invalid") 
+        except ValueError:
+            print("it has to be a float number")
+         
+         
+         
+        
+            
+        go_or_not  = input("do you wish to continue/ input yes or no: ")
+        
+        go_or_not.lower #yes
+                
+        if go_or_not != "yes":
+            break
+            #use if and else statement to print out the appropriate operations and print out the correct values 
          
     
 #main loop
