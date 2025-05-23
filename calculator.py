@@ -49,7 +49,7 @@ def sqrt(x):
 def main():
 
     #Various operations in a list
-    operation  = ["+","-","*","/", "**", "%", "V"]
+    operation  = ["+","-","*","/","**","%","V"]
     
     '''accept the values for the calculations. 3 values to be exact needed here
         FIRST NUMBER, OPERATION, SECOND NUMBER  
