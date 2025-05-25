@@ -44,7 +44,7 @@
                 font_size: 32
                 text: "/"
                 background_color: (157/255,157/255,157/255)
-                on_press: root.multiply("/")
+                on_press: root.math_sign("/")
 
 
 
@@ -137,6 +137,7 @@
                 size_hint: (.2, .2)
                 font_size: 32
                 text: "+/-"
+                on_press: root.neg_or_pos()
                 
 
             Button:

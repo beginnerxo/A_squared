@@ -71,10 +71,6 @@ class MyLayout(Widget):
         
     
     
-    
-    
-    
-    
         
     def equals(self):
          default = self.ids.calc_input.text
@@ -95,32 +91,62 @@ class MyLayout(Widget):
          if "-" in default:
              num_list = default.split("-")
              
-             answer = float(num_list[0])
-             #print(answer)
+             first_number = float(num_list[0])
              
-             for i in range(len(num_list)):
-                answer = calculator.sub(answer,float(i+1)) 
-             self.ids.calc_input.text = f'{answer}'
+             new_answer = calculator.sub(first_number,float(num_list[1])) 
+             self.ids.calc_input.text = f'{new_answer}'
+             
 
-         if "X" in default:
-             num_list = default.split("-")
+         if "*" in default:
+             num_list = default.split("*")
              
-             answer = float(num_list[0])
-             #print(answer)
+             first_number = float(num_list[0])
              
-             for i in range(len(num_list)):
-                answer = calculator.mul(answer,float(i+1)) 
+             answer = calculator.mul(first_number,float(num_list[1])) 
+             
              self.ids.calc_input.text = f'{answer}'
+             
+             
+         if "%" in default:
+             num_list = default.split("%")
+             
+             first_number = float(num_list[0])
+             
+             answer = calculator.mod(first_number,float(num_list[1])) 
+             
+             self.ids.calc_input.text = f'{answer}'
+             
+             
              
          if "/" in default:
-             num_list = default.split("-")
+             num_list = default.split("/")
              
-             answer = float(num_list[0])
-             #print(answer)
+             first_number = float(num_list[0])
              
-             for i in range(len(num_list)):
-                answer = calculator.div(answer,float(i+1)) 
+            
+             answer = calculator.div(first_number,float(num_list[1])) 
+             
+             #printing to the screen
              self.ids.calc_input.text = f'{answer}'
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+          #takle this later   
+    def neg_or_pos(self):
+        default = float(self.ids.calc_input.text)
+        if default >0 or default<0:
+            default = -default
+        else:
+            default =default
+             
+        self.ids.calc_input.text = f'{default}'
              
             
             
